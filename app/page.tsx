@@ -1,103 +1,85 @@
-import Image from "next/image";
+import { LucideBellDot } from "lucide-react";
 
-export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+import { Documentation } from "@/components/documentation";
+import { GetStarted } from "@/components/get_started";
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+export default function Hero() {
+    return (
+        <section className="w-full max-w-7xl mx-auto px-6 lg:px-16 flex flex-row items-center justify-between min-h-[85vh] gap-12">
+            {/* Left Column */}
+            <div className="flex-1 flex flex-col justify-center">
+                <h1 className="text-4xl lg:text-6xl font-bold leading-none">
+                    Notifications simplified{" "}
+                    <span className="block text-accent">for developers</span>
+                </h1>
+                <p className="mt-4 text-lg lg:text-xl text-text-primary max-w-[48ch]">
+                    Bodhveda is an open-source platform that lets you add in-app
+                    notifications to your product in minutes — not weeks.
+                </p>
+                <div className="flex items-baseline gap-x-4 mt-12">
+                    <GetStarted />
+
+                    <Documentation />
+                </div>
+            </div>
+
+            {/* Right Column */}
+            <div className="flex-1 flex flex-col relative">
+                {/* cURL Block */}
+                <div className="bg-surface-3 border-1 border-border-soft text-white font-mono text-sm rounded-xl p-5 shadow-lg relative z-10">
+                    <pre className="overflow-x-auto">
+                        {`curl -X POST https://api.bodhveda.com/notifications/send
+  -H "Authorization: Bearer bv_xxxxxxxxx"
+  -H "Content-Type: application/json"
+  -d '{
+    "recipient": "user_123",
+    "payload": {
+      "title": "Welcome to Bodhveda",
+      "body": "Your account has been created successfully."
+    }
+  }'`}
+                    </pre>
+                </div>
+
+                {/* Inbox Screenshot */}
+                <div className="bg-white rounded-xl shadow-lg p-5 w-5/6 absolute bottom-10 right-0 border border-gray-200">
+                    <LucideBellDot
+                        size={32}
+                        className="absolute text-accent right-2 -top-12 bg-white rounded-full p-1"
+                    />
+                    <div className="space-y-3">
+                        <div className="p-3 rounded-lg bg-blue-50">
+                            <p className="font-medium text-accent">
+                                Welcome to Bodhveda
+                            </p>
+                            <p className="text-sm text-gray-500">
+                                Your account has been created successfully.
+                            </p>
+                            <span className="text-xs text-gray-400">
+                                Just now
+                            </span>
+                        </div>
+                        <div className="p-3 rounded-lg hover:bg-gray-50">
+                            <p className="font-medium">Weekly Summary</p>
+                            <p className="text-sm text-gray-500">
+                                You reached 10,000 notifications this week.
+                            </p>
+                            <span className="text-xs text-gray-400">
+                                2h ago
+                            </span>
+                        </div>
+                        <div className="p-3 rounded-lg hover:bg-gray-50">
+                            <p className="font-medium">Integration Tip</p>
+                            <p className="text-sm text-gray-500">
+                                Use webhooks to sync notifications in real-time.
+                            </p>
+                            <span className="text-xs text-gray-400">
+                                1d ago
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 }
