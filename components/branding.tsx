@@ -7,7 +7,7 @@ import { MuseoModerno } from "next/font/google";
 import { Logo } from "@/components/logo";
 
 const museoModerno = MuseoModerno({
-    weight: ["400", "700"],
+    weight: ["500"],
     subsets: ["latin"],
     variable: "--font-logo",
 });
@@ -31,8 +31,8 @@ export const Branding: FC<BrandingProps> = (props) => {
 
     const classes = {
         small: {
-            logo: 24,
-            text: "text-[24px]",
+            logo: 28,
+            text: "text-[28px]",
         },
         default: {
             logo: 36,
@@ -50,7 +50,7 @@ export const Branding: FC<BrandingProps> = (props) => {
         >
             <div
                 className={cn(
-                    "font-logo text-logo inline-flex items-baseline gap-x-2 font-semibold select-none",
+                    "font-logo text-logo inline-flex items-baseline gap-x-2 font-medium select-none",
                     className
                 )}
             >

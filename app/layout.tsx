@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+
 import "./globals.css";
 import "netra/styles.css";
 
@@ -9,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-    title: "Bodhveda · In-App Notifications, Simplified.",
+    title: "Bodhveda - Notifications for developers",
     description:
         "Bodhveda is a notification platform that lets developers add in-app notifications to their products in minutes — not weeks. You send. We deliver.",
 };
@@ -30,7 +34,9 @@ export default function RootLayout({
                             backgroundImage: `radial-gradient(circle 600px at 50% 50%, rgba(59,130,246,0.3), transparent)`,
                         }}
                     />
+                    <Navbar />
                     {children}
+                    <Footer />
                 </div>
             </body>
         </html>
