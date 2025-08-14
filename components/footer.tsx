@@ -3,17 +3,15 @@ import Link from "next/link";
 
 export function Footer() {
     return (
-        // 'relative' fixes the links from breaking.
         <footer className="relative">
-            <div className="max-w-[1200px] mx-auto px-6 py-12 flex-x justify-between!">
+            <div className="max-w-[1200px] mx-auto px-6 py-12 flex-x items-start justify-between!">
                 <div>
                     <p className="text-text-muted">
-                        © {new Date().getFullYear()} Mudgal Labs. All rights
-                        reserved.
+                        © {new Date().getFullYear()} Mudgal Labs
                     </p>
                 </div>
 
-                <div className="flex-y sm:flex-x gap-x-4! ">
+                <div className="flex-y! sm:flex-x gap-x-4! ">
                     <Link href="/terms">Terms of Service</Link>
                     <Link href="/privacy">Privacy Policy</Link>
                     <Link href="/refund">Refund Policy</Link>

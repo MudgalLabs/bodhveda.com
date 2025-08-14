@@ -34,7 +34,7 @@ export default function Pricing() {
         <section id="pricing" className="text-text-primary mt-24">
             <div className="max-w-6xl mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-7xl font-bold tracking-tight">
+                    <h2 className="text-3xl sm:text-7xl font-bold tracking-tight">
                         Two plans,{" "}
                         <span className="text-accent">one purpose</span>
                     </h2>

@@ -117,8 +117,8 @@ export default function Hero() {
                     {/* Right Column */}
                     <div className="flex-1 flex flex-col relative mt-12 lg:mt-0 min-w-0 mx-4">
                         {/* cURL Block */}
-                        <div className="w-full max-w-screen overflow-x-auto bg-surface-3 border-1 border-border-soft text-white font-mono text-sm rounded-xl sm:p-5 p-2 shadow-lg relative z-1">
-                            <pre className="select-text! whitespace-pre font-mono w-full">
+                        <div className="w-[95%] mx-auto max-w-screen overflow-x-auto bg-surface-3 border-1 border-border-soft text-white font-mono text-sm rounded-xl sm:p-5 p-2 shadow-lg relative z-1">
+                            <pre className="select-text! whitespace-pre font-mono">
                                 {`curl -X POST https://api.bodhveda.com/notifications/send 
   -H "Authorization: Bearer bv_xxxxxxxxx"
   -H "Content-Type: application/json"

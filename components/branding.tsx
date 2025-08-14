@@ -57,7 +57,12 @@ export const Branding: FC<BrandingProps> = (props) => {
                 {!hideLogo && <Logo size={classes[size].logo} />}
 
                 {!hideText && (
-                    <h1 className={cn(` text-logo`, classes[size].text)}>
+                    <h1
+                        className={cn(
+                            `hidden sm:block! text-logo`,
+                            classes[size].text
+                        )}
+                    >
                         bodhveda
                     </h1>
                 )}
