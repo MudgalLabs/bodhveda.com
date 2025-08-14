@@ -36,7 +36,7 @@ export const Branding: FC<BrandingProps> = (props) => {
         },
         default: {
             logo: 36,
-            text: "text-[40px]",
+            text: "text-[36px]",
         },
         large: {
             logo: 48,
