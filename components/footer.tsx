@@ -11,7 +11,7 @@ export function Footer() {
                     </p>
                 </div>
 
-                <div className="flex-y! sm:flex-x gap-x-4! ">
+                <div className="flex-y sm:flex-x gap-x-4! ">
                     <Link href="/terms">Terms of Service</Link>
                     <Link href="/privacy">Privacy Policy</Link>
                     <Link href="/refund">Refund Policy</Link>
