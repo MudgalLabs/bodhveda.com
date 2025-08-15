@@ -37,7 +37,7 @@ const features = [
     },
     {
         icon: BarChart2,
-        title: "Analytics & Observability",
+        title: "Analytics & observability",
         description:
             "Track notification states — delivered, seen, read and opened in real-time.",
     },
@@ -61,7 +61,7 @@ const features = [
     },
     {
         icon: Cloud,
-        title: "Self-host or Managed",
+        title: "Self-host or managed",
         description:
             "Run on our cloud or your own infrastructure. No vendor lock-in.",
     },
@@ -71,17 +71,17 @@ const useCases = [
     {
         icon: BookOpen,
         title: "Dev.to-style blog platform",
-        description: "Send notifications for mentions, comments, or likes.",
+        description: "Notify users about mentions, comments, or likes.",
     },
     {
         icon: Sliders,
         title: "SaaS dashboards",
-        description: "Notify users about usage, billing, or system updates.",
+        description: "Send usage, billing, or system notifications.",
     },
     {
         icon: Github,
         title: "Large-scale platforms",
-        description: "GitHub, YouTube, or Instagram like notifications.",
+        description: "Deliver GitHub, YouTube, Instagram-style notifications.",
     },
 ];
 
@@ -99,12 +99,19 @@ export default function Hero() {
                             </span>
                         </h1>
                         <p className="mt-4 text-lg lg:text-xl text-text-primary max-w-[36ch]">
-                            Bodhveda is an open-source platform that lets you
-                            add in-app notifications to your product in minutes,
-                            not weeks.{" "}
-                            <span className="font-semibold block sm:inline!">
-                                You send. We deliver.
-                            </span>
+                            Bodhveda is an{" "}
+                            <a
+                                className="relative text-lg! lg:text-xl!"
+                                href="https://github.com/MudgalLabs/bodhveda"
+                            >
+                                open-source
+                            </a>{" "}
+                            notification platform for sending direct or{" "}
+                            <span className="font-bold">broadcast</span>{" "}
+                            notifications{" "}
+                            <span className="font-bold">at scale</span>, while
+                            respecting each user’s{" "}
+                            <span className="font-bold">preferences</span>.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center sm:items-baseline! gap-4 mt-12">
@@ -117,7 +124,7 @@ export default function Hero() {
                     {/* Right Column */}
                     <div className="flex-1 flex flex-col relative mt-12 lg:mt-0 min-w-0 mx-4">
                         {/* cURL Block */}
-                        <div className="w-[95%] mx-auto max-w-screen overflow-x-auto bg-surface-3 border-1 border-border-soft text-white font-mono text-sm rounded-xl sm:p-5 p-2 shadow-lg relative z-1">
+                        <div className="w-[95%] sm:w-full mx-auto max-w-screen overflow-x-auto bg-surface-3 border-1 border-border-soft text-white font-mono text-sm rounded-xl sm:p-5 p-2 shadow-lg relative z-1">
                             <pre className="select-text! whitespace-pre font-mono">
                                 {`curl -X POST https://api.bodhveda.com/notifications/send 
   -H "Authorization: Bearer bv_xxxxxxxxx"
@@ -156,25 +163,6 @@ export default function Hero() {
                     </div>
                 </section>
 
-                {/* Features Section */}
-                <section
-                    id="features"
-                    className="w-full max-w-7xl mx-auto px-6 lg:px-16 mt-24"
-                >
-                    <h2 className="big-heading font-bold mb-8">Features</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                        {features.map(({ icon: Icon, title, description }) => (
-                            <div key={title} className="flex flex-col gap-3">
-                                <Icon className="w-8 h-8 text-accent" />
-                                <h3 className="text-xl font-semibold">
-                                    {title}
-                                </h3>
-                                <p className="text-text-muted">{description}</p>
-                            </div>
-                        ))}
-                    </div>
-                </section>
-
                 {/* Use Cases Section */}
                 <section
                     id="use-cases"
@@ -192,6 +180,25 @@ export default function Hero() {
                                         {title}
                                     </h3>
                                 </div>
+                                <p className="text-text-muted">{description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Features Section */}
+                <section
+                    id="features"
+                    className="w-full max-w-7xl mx-auto px-6 lg:px-16 mt-24"
+                >
+                    <h2 className="big-heading font-bold mb-8">Features</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                        {features.map(({ icon: Icon, title, description }) => (
+                            <div key={title} className="flex flex-col gap-3">
+                                <Icon className="w-8 h-8 text-accent" />
+                                <h3 className="text-xl font-semibold">
+                                    {title}
+                                </h3>
                                 <p className="text-text-muted">{description}</p>
                             </div>
                         ))}
