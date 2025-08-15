@@ -140,7 +140,7 @@ export default function Hero() {
                         </div>
 
                         {/* Inbox Screenshot */}
-                        <div className="bg-white rounded-xl shadow-lg p-5 mx-4 sm:w-5/6 absolute bottom-50 sm:bottom-50 right-0 border border-gray-200 mt-12">
+                        <div className="bg-white rounded-xl shadow-lg p-5 mx-4 sm:w-5/6 absolute bottom-52 right-0 border border-gray-200 mt-12">
                             <LucideBellDot
                                 size={32}
                                 className="absolute text-accent right-2 -top-12 bg-white rounded-full p-1"
