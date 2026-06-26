@@ -15,7 +15,7 @@ const inter = Inter({
 export const metadata: Metadata = {
     title: "Bodhveda - Notifications for developers",
     description:
-        "Bodhveda is a notification platform that lets developers add in-app notifications to their products in minutes — not weeks. You send. We deliver.",
+        "Bodhveda is a notification platform that lets developers add in-app notifications to their products in minutes — not weeks. You send. Bodhveda delivers.",
 };
 
 export default function RootLayout({

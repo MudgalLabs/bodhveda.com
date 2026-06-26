@@ -18,6 +18,7 @@ interface BrandingProps {
     hideText?: boolean;
     hideLogo?: boolean;
     hideBetaTag?: boolean;
+    showTextOnMobile?: boolean;
 }
 
 export const Branding: FC<BrandingProps> = (props) => {
@@ -27,6 +28,7 @@ export const Branding: FC<BrandingProps> = (props) => {
         hideLogo = false,
         hideText = false,
         hideBetaTag = false,
+        showTextOnMobile = false,
     } = props;
 
     const classes = {
@@ -59,7 +61,9 @@ export const Branding: FC<BrandingProps> = (props) => {
                 {!hideText && (
                     <h1
                         className={cn(
-                            `hidden sm:block! text-logo`,
+                            showTextOnMobile
+                                ? `block! text-logo`
+                                : `hidden sm:block! text-logo`,
                             classes[size].text
                         )}
                     >

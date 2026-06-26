@@ -20,10 +20,10 @@ export default function RefundPage() {
             <p className="mb-4">
                 For any concerns or questions, feel free to reach out at{" "}
                 <a
-                    href="mailto:hey@bodhveda.com"
+                    href="mailto:hey@ceoshikhar.com"
                     className="font-bold text-sm! sm:text-base!"
                 >
-                    hey@bodhveda.com
+                    hey@ceoshikhar.com
                 </a>
                 .
             </p>

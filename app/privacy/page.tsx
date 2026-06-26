@@ -103,9 +103,9 @@ export default function PrivacyPage() {
 
             <h2 className="sub-heading mt-4">8. Contact</h2>
             <p>
-                Have questions or concerns? Reach out to{" "}
-                <a className="text-base!" href="mailto:hey@bodhveda.com">
-                    hey@bodhveda.com
+                Have questions or concerns? Reach out to me at{" "}
+                <a className="text-base!" href="mailto:hey@ceoshikhar.com">
+                    hey@ceoshikhar.com
                 </a>
             </p>
         </div>

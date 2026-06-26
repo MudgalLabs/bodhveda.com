@@ -63,7 +63,7 @@ const features = [
         icon: Cloud,
         title: "Self-host or managed",
         description:
-            "Run on our cloud or your own infrastructure. No vendor lock-in.",
+            "Run on managed cloud or your own infrastructure. No vendor lock-in.",
     },
 ];
 
