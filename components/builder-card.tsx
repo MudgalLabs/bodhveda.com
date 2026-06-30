@@ -22,7 +22,7 @@ export function BuilderCard({ className = "" }: BuilderCardProps) {
         >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-                src="https://ceoshikhar.com/images/me.png"
+                src="https://ceoshikhar.com/images/me.jpg"
                 alt="Shikhar Sharma"
                 width={44}
                 height={44}
